@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Usar la fuente Roboto */
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Color de fondo neutro */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background: #4a4a4a; /* Gris oscuro para el fondo del header */
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #333; /* Línea de separación más suave */
+}
+
+.logo {
+    width: 120px;
+    height: auto; /* Mantener la relación de aspecto del logo */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4af37; /* Color dorado suave para el hover */
+}
+
+.hero {
+    background: url('front-page.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente para el texto */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+.contact {
+    padding: 40px 20px; /* Ajustar el padding para menos espacio */
+    background: #ffffff; /* Fondo blanco para el contacto */
+    text-align: center;
+    border-top: 1px solid #e0e0e0; /* Línea sutil para separar secciones */
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333; /* Color de texto gris oscuro */
+}
+
+.contact p {
+    margin: 10px 0; /* Reducir los márgenes entre los párrafos */
+    font-size: 1.2em;
+}
+
+.contact a {
+    color: #4a4a4a; /* Gris oscuro para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #d4af37; /* Color dorado suave para el hover */
+}
+
+footer {
+    background: #4a4a4a; /* Gris oscuro para el fondo del footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
