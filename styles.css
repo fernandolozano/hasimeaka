@@ -99,12 +99,6 @@ nav a:hover {
     border-top: 1px solid #e0e0e0; /* Línea sutil para separar secciones */
 }
 
-.contact h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333; /* Color de texto gris oscuro */
-}
-
 .contact p {
     margin: 10px 0; /* Reducir los márgenes entre los párrafos */
     font-size: 1.2em;
@@ -129,4 +123,68 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .contact {
+        padding: 20px 10px;
+    }
+
+    .contact p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .contact p {
+        font-size: 0.9em;
+    }
 }
