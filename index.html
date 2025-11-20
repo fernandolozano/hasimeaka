@@ -4,44 +4,379 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HASI - Instalaciones Meaka S.L.</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <img src="logo.png" alt="HASI - Instalaciones Meaka S.L. Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>HASI - Instalaciones Meaka S.L.</h1>
-            <p>Tu solución integral en fontanería</p>
+    <style>
+        /* Animaciones personalizadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div id="logo-text" class="font-bold text-2xl tracking-tighter text-white drop-shadow-md transition-colors">
+                HASI <span class="text-base font-normal opacity-90">Instalaciones Meaka</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Inicio</a>
+                <a href="#nosotros" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Nosotros</a>
+                <a href="#servicios" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Servicios</a>
+                <a href="#contacto" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Contacto</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-red-800 bg-white p-2 rounded-md shadow-sm">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-lg py-4 flex flex-col items-center space-y-4 border-t border-gray-100">
+            <a href="#inicio" class="mobile-link text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50">Inicio</a>
+            <a href="#nosotros" class="mobile-link text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50">Nosotros</a>
+            <a href="#servicios" class="mobile-link text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50">Servicios</a>
+            <a href="#contacto" class="mobile-link text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="front-page.jpg" 
+                alt="Furgonetas HASI Instalaciones" 
+                class="w-full h-full object-cover object-center"
+                onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#2c2c2c';"
+            >
+            <!-- Overlay ligero -->
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-2xl animate-fade-in-up bg-black/40 p-8 rounded-xl backdrop-blur-sm border border-white/10">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight drop-shadow-lg">
+                    Expertos en <span class="text-red-500">Instalaciones</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-white font-medium drop-shadow-md">
+                    Fontanería, Gas y Climatización en Gipuzkoa. <br/>
+                    Calidad profesional y servicio cercano.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-full font-bold text-lg transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5"></i> Contactar Ahora
+                    </a>
+                    <a href="#servicios" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <p>Teléfono: <a href="tel:+34605722561">(+34) 605722561</a></p>
-            <p>Email: <a href="mailto:hasi.meaka@gmail.com">hasi.meaka@gmail.com</a></p>
-            <p>Dirección: C/ Juan Thalamas Labandibar, 33 - Irun (Gipuzkoa)</p>
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Foto de flota -->
+                <div class="lg:w-1/2 relative group">
+                    <div class="absolute -inset-4 bg-red-900 rounded-xl opacity-20 group-hover:opacity-40 transition-opacity transform rotate-2"></div>
+                    <img 
+                        src="front-page.jpg" 
+                        alt="Flota de vehículos HASI en la costa" 
+                        class="relative rounded-lg shadow-2xl w-full object-cover h-[400px]"
+                    >
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">HASI Instalaciones Meaka</h2>
+                    <div class="w-20 h-1 bg-red-700 mb-6"></div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Somos una empresa dedicada a ofrecer soluciones integrales en Irun y toda Gipuzkoa e Iparralde. Nuestra flota de vehículos totalmente equipada nos permite desplazarnos rápidamente para atender urgencias, reformas y nuevas instalaciones.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i data-lucide="check-circle" class="text-red-700 mr-3 w-6 h-6"></i>
+                            <span class="font-medium">Movilidad total</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i data-lucide="check-circle" class="text-red-700 mr-3 w-6 h-6"></i>
+                            <span class="font-medium">Presupuesto a medida</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i data-lucide="check-circle" class="text-red-700 mr-3 w-6 h-6"></i>
+                            <span class="font-medium">Atención urgente</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                            <i data-lucide="check-circle" class="text-red-700 mr-3 w-6 h-6"></i>
+                            <span class="font-medium">Materiales de calidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> HASI - Instalaciones Meaka S.L. Todos los derechos reservados.</p>
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-red-700 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Soluciones integrales para su hogar o negocio con la garantía de Instalaciones Meaka.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border-b-4 border-red-800 group">
+                    <div class="mb-6 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                        <i data-lucide="wrench" class="text-red-800 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Fontanería General</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Reparaciones, fugas, instalaciones de agua sanitaria y reformas de baños y cocinas.
+                    </p>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border-b-4 border-red-800 group">
+                    <div class="mb-6 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                        <i data-lucide="flame" class="text-red-800 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Instalaciones de Gas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Certificaciones, revisiones y nuevas instalaciones de gas para particulares y empresas.
+                    </p>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border-b-4 border-red-800 group">
+                    <div class="mb-6 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                        <i data-lucide="thermometer" class="text-red-800 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Climatización</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Instalación y mantenimiento de calefacción, calderas y sistemas de aire acondicionado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA DE CONFIANZA -->
+    <section class="py-12 bg-red-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <i data-lucide="clock" class="mb-2 opacity-80 w-8 h-8"></i>
+                    <span class="text-3xl font-bold">Rápido</span>
+                    <span class="text-red-200">Servicio eficiente</span>
+                </div>
+                <div class="flex flex-col items-center border-l-0 md:border-l border-r-0 md:border-r border-red-800">
+                    <i data-lucide="check-circle" class="mb-2 opacity-80 w-8 h-8"></i>
+                    <span class="text-3xl font-bold">Garantizado</span>
+                    <span class="text-red-200">Calidad profesional</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-lucide="map-pin" class="mb-2 opacity-80 w-8 h-8"></i>
+                    <span class="text-3xl font-bold">Local</span>
+                    <span class="text-red-200">Irun y Gipuzkoa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row">
+                
+                <!-- Info Contacto -->
+                <div class="bg-gray-900 text-white p-10 md:w-2/5 flex flex-col justify-between relative overflow-hidden">
+                    <!-- Decoración -->
+                    <div class="absolute -top-20 -right-20 w-60 h-60 bg-red-900 rounded-full opacity-20"></div>
+                    <div class="absolute bottom-10 right-10 w-20 h-20 bg-red-600 rounded-full opacity-20"></div>
+
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">Contacte con nosotros</h3>
+                        <p class="text-gray-400 mb-8">
+                            Estamos disponibles para atender sus necesidades de fontanería y climatización.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="phone" class="text-red-500 mt-1"></i>
+                                <div>
+                                    <p class="text-sm text-gray-400">Teléfono</p>
+                                    <a href="tel:+34605722561" class="text-xl font-semibold hover:text-red-400 transition-colors">
+                                        (+34) 605722561
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="mail" class="text-red-500 mt-1"></i>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <a href="mailto:hasi.meaka@gmail.com" class="text-lg font-semibold hover:text-red-400 transition-colors break-all">
+                                        hasi.meaka@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="map-pin" class="text-red-500 mt-1"></i>
+                                <div>
+                                    <p class="text-sm text-gray-400">Dirección</p>
+                                    <p class="text-lg font-semibold leading-snug">
+                                        C/ Juan Thalamas Labandibar, 33 - Irun (Gipuzkoa)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <a 
+                            href="https://www.google.com/maps/search/?api=1&query=C/+Juan+Thalamas+Labandibar,+33+-+Irun+(Gipuzkoa)" 
+                            target="_blank" 
+                            rel="noreferrer"
+                            class="inline-flex items-center text-red-400 hover:text-white transition-colors font-medium"
+                        >
+                            Ver en Google Maps &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div class="md:w-3/5 h-96 md:h-auto bg-gray-200 relative">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa Irun"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.7237079753872!2d-1.7805659233105062!3d43.34083737257695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5108e94bf3cde9%3A0x78129cf83ba31450!2sFontaneria%20HASI!5e1!3m2!1ses!2sde!4v1763651438629!5m2!1ses!2sde">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h4 class="text-white font-bold text-lg">HASI</h4>
+                <p class="text-sm">Instalaciones Meaka S.L.</p>
+            </div>
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+                <p class="mt-1">Irun (Gipuzkoa)</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script>
+        // Inicializar iconos Lucide
+        lucide.createIcons();
+
+        // Año actual en footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Elementos del Navbar
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Función para cambiar el estilo del navbar al hacer scroll
+        function updateNavbar() {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-red-900');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-700');
+                });
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-red-900');
+
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-700');
+                });
+            }
+        }
+
+        // Escuchar evento scroll
+        window.addEventListener('scroll', updateNavbar);
+
+        // Toggle menú móvil
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Cambiar icono menú
+            const iconName = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+            // Limpiar contenido previo
+            mobileMenuBtn.innerHTML = '';
+            // Crear nuevo icono
+            const iconElement = document.createElement('i');
+            iconElement.setAttribute('data-lucide', iconName);
+            mobileMenuBtn.appendChild(iconElement);
+            lucide.createIcons();
+        });
+
+        // Cerrar menú móvil al hacer click en enlace
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                // Resetear icono a menú
+                mobileMenuBtn.innerHTML = '';
+                const iconElement = document.createElement('i');
+                iconElement.setAttribute('data-lucide', 'menu');
+                mobileMenuBtn.appendChild(iconElement);
+                lucide.createIcons();
+            });
+        });
+    </script>
 </body>
 </html>
