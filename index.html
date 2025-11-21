@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expertos en fontanería, gas y climatización en Irun, Gipuzkoa e Iparralde. HASI Instalaciones Meaka ofrece servicio rápido, profesional y atención urgente.">
     <title>HASI - Instalaciones Meaka S.L.</title>
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="%237f1d1d"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="65" fill="white">H</text></svg>'>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Animaciones personalizadas */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -264,7 +265,7 @@
 
                     <div class="mt-12">
                         <a 
-                            href="https://www.google.com/maps/search/?api=1&query=C/+Juan+Thalamas+Labandibar,+33+-+Irun+(Gipuzkoa)" 
+                            href="https://maps.app.goo.gl/CjDZombEw4pxM4fC6" 
                             target="_blank" 
                             rel="noreferrer"
                             class="inline-flex items-center text-red-400 hover:text-white transition-colors font-medium"
@@ -274,7 +275,6 @@
                     </div>
                 </div>
 
-                <!-- Mapa -->
                 <div class="md:w-3/5 h-96 md:h-auto bg-gray-200 relative">
                     <iframe 
                         width="100%" 
@@ -291,7 +291,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
@@ -305,15 +304,11 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
-        // Inicializar iconos Lucide
         lucide.createIcons();
 
-        // Año actual en footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Elementos del Navbar
         const navbar = document.getElementById('navbar');
         const logoText = document.getElementById('logo-text');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -321,7 +316,6 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Función para cambiar el estilo del navbar al hacer scroll
         function updateNavbar() {
             if (window.scrollY > 50) {
                 navbar.classList.remove('bg-transparent', 'py-4');
@@ -348,29 +342,22 @@
             }
         }
 
-        // Escuchar evento scroll
         window.addEventListener('scroll', updateNavbar);
 
-        // Toggle menú móvil
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             
-            // Cambiar icono menú
             const iconName = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
-            // Limpiar contenido previo
             mobileMenuBtn.innerHTML = '';
-            // Crear nuevo icono
             const iconElement = document.createElement('i');
             iconElement.setAttribute('data-lucide', iconName);
             mobileMenuBtn.appendChild(iconElement);
             lucide.createIcons();
         });
 
-        // Cerrar menú móvil al hacer click en enlace
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                // Resetear icono a menú
                 mobileMenuBtn.innerHTML = '';
                 const iconElement = document.createElement('i');
                 iconElement.setAttribute('data-lucide', 'menu');
