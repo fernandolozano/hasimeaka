@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expertos en fontanería, gas y climatización en Irun, Gipuzkoa e Iparralde. HASI Instalaciones Meaka ofrece servicio rápido, profesional y atención urgente.">
+    <meta name="description" content="Expertos en fontanería, gas, aerotermia y climatización en Irun, Gipuzkoa e Iparralde. HASI Instalaciones Meaka ofrece servicio rápido y profesional.">
     <title>HASI Instalaciones Meaka S.L.</title>
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="%237f1d1d"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="65" fill="white">H</text></svg>'>
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
@@ -35,15 +33,12 @@
 </head>
 <body class="bg-gray-50 font-sans text-gray-800 antialiased">
 
-    <!-- NAVBAR -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo -->
             <div id="logo-text" class="font-bold text-2xl tracking-tighter text-white drop-shadow-md transition-colors">
                 HASI <span class="text-base font-normal opacity-90">Instalaciones Meaka</span>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
                 <a href="#inicio" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Inicio</a>
                 <a href="#nosotros" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Nosotros</a>
@@ -51,13 +46,11 @@
                 <a href="#contacto" class="nav-link text-white font-medium hover:text-red-500 transition-colors drop-shadow-sm">Contacto</a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-red-800 bg-white p-2 rounded-md shadow-sm">
                 <i data-lucide="menu"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-lg py-4 flex flex-col items-center space-y-4 border-t border-gray-100">
             <a href="#inicio" class="mobile-link text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50">Inicio</a>
             <a href="#nosotros" class="mobile-link text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50">Nosotros</a>
@@ -66,9 +59,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img 
                 src="front-page.jpg" 
@@ -76,17 +67,16 @@
                 class="w-full h-full object-cover object-center"
                 onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#2c2c2c';"
             >
-            <!-- Overlay ligero -->
             <div class="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div class="container mx-auto px-4 relative z-10 text-white">
-            <div class="max-w-2xl animate-fade-in-up bg-black/40 p-8 rounded-xl backdrop-blur-sm border border-white/10">
+            <div class="max-w-3xl animate-fade-in-up bg-black/40 p-8 rounded-xl backdrop-blur-sm border border-white/10">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight drop-shadow-lg">
                     Expertos en <span class="text-red-500">Instalaciones</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-white font-medium drop-shadow-md">
-                    Fontanería, Gas y Climatización en Gipuzkoa. <br/>
+                    Fontanería, Gas, Aerotermia y Climatización en Gipuzkoa. <br/>
                     Calidad profesional y servicio cercano.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
@@ -101,11 +91,9 @@
         </div>
     </section>
 
-    <!-- SOBRE NOSOTROS -->
     <section id="nosotros" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Foto de flota -->
                 <div class="lg:w-1/2 relative group">
                     <div class="absolute -inset-4 bg-red-900 rounded-xl opacity-20 group-hover:opacity-40 transition-opacity transform rotate-2"></div>
                     <img 
@@ -119,12 +107,12 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-6">HASI Instalaciones Meaka</h2>
                     <div class="w-20 h-1 bg-red-700 mb-6"></div>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Somos una empresa dedicada a ofrecer soluciones integrales en Irun y toda Gipuzkoa e Iparralde. Nuestra flota de vehículos totalmente equipada nos permite desplazarnos rápidamente para atender urgencias, reformas y nuevas instalaciones.
+                        Somos una empresa dedicada a ofrecer soluciones integrales en Irun, toda Gipuzkoa e Iparralde. Nuestra experiencia abarca desde la fontanería tradicional hasta las <strong>nuevas energías renovables</strong> como la aerotermia.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div class="flex items-center p-3 bg-gray-50 rounded-lg">
                             <i data-lucide="check-circle" class="text-red-700 mr-3 w-6 h-6"></i>
-                            <span class="font-medium">Movilidad total</span>
+                            <span class="font-medium">Eficiencia Energética</span>
                         </div>
                         <div class="flex items-center p-3 bg-gray-50 rounded-lg">
                             <i data-lucide="check-circle" class="text-red-700 mr-3 w-6 h-6"></i>
@@ -144,53 +132,62 @@
         </div>
     </section>
 
-    <!-- SERVICIOS -->
     <section id="servicios" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
                 <div class="w-24 h-1 bg-red-700 mx-auto"></div>
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-                    Soluciones integrales para su hogar o negocio con la garantía de Instalaciones Meaka.
+                    Soluciones integrales para su hogar o negocio, combinando experiencia tradicional y tecnología moderna.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Servicio 1 -->
-                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border-b-4 border-red-800 group">
-                    <div class="mb-6 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white rounded-2xl p-6 hover:shadow-xl transition-all border-b-4 border-red-800 group flex flex-col">
+                    <div class="mb-6 p-4 bg-red-50 rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                        <i data-lucide="leaf" class="text-red-800 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Aerotermia</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Sistemas de energía renovable de alta eficiencia. Ahorre en su factura instalando bombas de calor de última generación.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 hover:shadow-xl transition-all border-b-4 border-red-800 group flex flex-col">
+                    <div class="mb-6 p-4 bg-red-50 rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
                         <i data-lucide="wrench" class="text-red-800 w-10 h-10"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Fontanería General</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Reparaciones, fugas, instalaciones de agua sanitaria y reformas de baños y cocinas.
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Fontanería</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Reparaciones urgentes, fugas, instalaciones de agua sanitaria (ACS) y reformas completas de baños y cocinas.
                     </p>
                 </div>
-                <!-- Servicio 2 -->
-                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border-b-4 border-red-800 group">
-                    <div class="mb-6 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+
+                <div class="bg-white rounded-2xl p-6 hover:shadow-xl transition-all border-b-4 border-red-800 group flex flex-col">
+                    <div class="mb-6 p-4 bg-red-50 rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
                         <i data-lucide="flame" class="text-red-800 w-10 h-10"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Instalaciones de Gas</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Certificaciones, revisiones y nuevas instalaciones de gas para particulares y empresas.
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Instalaciones de Gas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Certificaciones, revisiones obligatorias y nuevas instalaciones de gas natural o propano para particulares y empresas.
                     </p>
                 </div>
-                <!-- Servicio 3 -->
-                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border-b-4 border-red-800 group">
-                    <div class="mb-6 p-4 bg-white rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+
+                <div class="bg-white rounded-2xl p-6 hover:shadow-xl transition-all border-b-4 border-red-800 group flex flex-col">
+                    <div class="mb-6 p-4 bg-red-50 rounded-full w-20 h-20 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
                         <i data-lucide="thermometer" class="text-red-800 w-10 h-10"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Climatización</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Instalación y mantenimiento de calefacción, calderas y sistemas de aire acondicionado.
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Climatización</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-grow">
+                        Confort todo el año. Instalación y mantenimiento de calefacción, suelo radiante y aire acondicionado.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- BARRA DE CONFIANZA -->
     <section class="py-12 bg-red-900 text-white">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -213,21 +210,18 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
     <section id="contacto" class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row">
                 
-                <!-- Info Contacto -->
                 <div class="bg-gray-900 text-white p-10 md:w-2/5 flex flex-col justify-between relative overflow-hidden">
-                    <!-- Decoración -->
                     <div class="absolute -top-20 -right-20 w-60 h-60 bg-red-900 rounded-full opacity-20"></div>
                     <div class="absolute bottom-10 right-10 w-20 h-20 bg-red-600 rounded-full opacity-20"></div>
 
                     <div>
                         <h3 class="text-3xl font-bold mb-6">Contacte con nosotros</h3>
                         <p class="text-gray-400 mb-8">
-                            Estamos disponibles para atender sus necesidades de fontanería y climatización.
+                            Estamos disponibles para atender sus necesidades de fontanería, climatización y aerotermia.
                         </p>
 
                         <div class="space-y-6">
@@ -270,7 +264,7 @@
                             rel="noreferrer"
                             class="inline-flex items-center text-red-400 hover:text-white transition-colors font-medium"
                         >
-                            Ver en Google Maps &rarr;
+                            Ver en Google Maps →
                         </a>
                     </div>
                 </div>
@@ -298,7 +292,7 @@
                 <p class="text-sm">Instalaciones Meaka S.L.</p>
             </div>
             <div class="text-sm text-center md:text-right">
-                <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+                <p>© <span id="year"></span> Todos los derechos reservados.</p>
                 <p class="mt-1">Irun (Gipuzkoa)</p>
             </div>
         </div>
